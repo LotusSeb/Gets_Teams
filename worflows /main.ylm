@@ -1,1 +1,24 @@
+name: Get Teams IDs
 
+on:
+  workflow_dispatch:
+
+jobs:
+  get-teams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run get_teams.py
+        env:
+          FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
+        run: python get_teams.py
