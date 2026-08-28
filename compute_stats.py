@@ -50,8 +50,8 @@ def get_team_stats(team_id, team_full_name):
         "avg_conceded": round(avg_conceded, 2)
     }
 
-# Test avec quelques equipes d'abord
-test_teams = ["LOSC", "Paris SG", "Angers SCO"]
+# Toutes les equipes
+test_teams = list(MPP_TO_API_ID.keys())
 
 stats = {}
 for team_name in test_teams:
