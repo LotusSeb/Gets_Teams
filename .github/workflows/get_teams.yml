@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run compute_stats.py
+      - name: Run predict_formula.py
         env:
           FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
-        run: python compute_stats.py
+        run: python predict_formula.py
