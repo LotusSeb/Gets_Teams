@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run get_last5.py
+      - name: Run get_all_last5.py
         env:
           FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
-        run: python get_last5.py
+        run: python get_all_last5.py
